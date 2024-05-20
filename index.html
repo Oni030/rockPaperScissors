@@ -11,34 +11,38 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>Rock Paper Scissors</header>
-    <div class="main-wrapper pixel-corners">
-        <div class="action-zone">
-            <div class="button-container">
-                <button class="weapon-button pixel-corners" id="rock">&#9994;</button>
-                <button class="weapon-button pixel-corners" id="paper">&#9995;</button>
-                <button class="weapon-button pixel-corners" id="scissors">&#9996;</button>
-            </div>
-            <p class="text action-display">Choose Your Weapon!</p>
-        </div>
-        <div class="separator"></div>
-        <div class="bottom-wrapper">
-            <p class="text">Score</p>
-            <div class="score-wrapper">
-                <p class="text score-name">Player</p>
-                <div class="score-display">
-                    <p class="text">0</p>
-                    <p class="text">:</p>
-                    <p class="text">0</p>
+    <div id="wrapper">
+        <header>Rock Paper Scissors</header>
+        <div class="main-wrapper">
+            <div class="UI-container pixel-corners">
+                <div class="action-zone">
+                    <div class="button-container">
+                        <button class="weapon-button pixel-corners" id="rock">&#9994;</button>
+                        <button class="weapon-button pixel-corners" id="paper">&#9995;</button>
+                        <button class="weapon-button pixel-corners" id="scissors">&#9996;</button>
+                    </div>
+                    <p class="text action-display">Choose Your Weapon!</p>
                 </div>
-                <p class="text score-name">Computer</p>
+                <div class="separator"></div>
+                <div class="bottom-wrapper">
+                    <p class="text">Score</p>
+                    <div class="score-wrapper">
+                        <p class="text score-name">Player</p>
+                        <div class="score-display">
+                            <p class="text">0</p>
+                            <p class="text">:</p>
+                            <p class="text">0</p>
+                        </div>
+                        <p class="text score-name">Computer</p>
+                    </div>
+                    <button class="reset-button">Reset</button>
+                </div>
             </div>
-            <button class="reset-button">Reset</button>
         </div>
+        <footer>
+            <p class="footer-text">Vers. 1.0</p>
+            <p class="footer-text">Copyright (C) Thomas Jaufmann 2024</p>
+        </footer>
     </div>
-    <footer>
-        <p>Copyright (C) Thomas Jaufmann 2024</p>
-        <p>Vers. 1.0</p>
-    </footer>
 </body>
 </html>
