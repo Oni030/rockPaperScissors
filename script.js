@@ -39,3 +39,15 @@ function getWinPaper() {
         return true;
     };
 };
+
+// Calculate winner if player selects scissors
+function getWinScissors() {
+    let computerChoice = getComputerChoice();
+    if (computerChoice === 2) {
+        return undefined;
+    } else if (computerChoice === 0) {
+        return false;
+    } else if (computerChoice === 1) {
+        return true;
+    };
+};
