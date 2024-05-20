@@ -26,6 +26,8 @@ function getWinRock() {
     } else if (computerChoice === 2) {
         return true;
     };
+    //Add function-call to display winner
+    //Add function-call to change the score
 };
 
 // Calculate winner if player selects paper
@@ -38,6 +40,8 @@ function getWinPaper() {
     } else if (computerChoice === 0) {
         return true;
     };
+    //Add function-call to display winner
+    //Add function-call to change the score
 };
 
 // Calculate winner if player selects scissors
@@ -50,6 +54,8 @@ function getWinScissors() {
     } else if (computerChoice === 1) {
         return true;
     };
+    //Add function-call to display winner
+    //Add function-call to change the score
 };
 
 // Display winner in .action-zone
