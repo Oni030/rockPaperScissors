@@ -1,29 +1,43 @@
-body {
+html, body {
     box-sizing: border-box;
     font-family: "Jacquard 12", system-ui;
-    width: 100%;
-    height: 100vh;
+    height: 100%;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+#wrapper {
+    min-height: 100%;
+}
+
+header {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 64px;
+    text-shadow:silver 3px 5px;
+}
+
+.main-wrapper {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     overflow-y: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    text-align: center;
-    font-size: 64px;
-    text-shadow:lightgray 2px 4px;
-}
-
-.main-wrapper {
+.UI-container {
     max-width: 600px;
     padding: 48px 24px;
+    margin: 46.2px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: lightgrey;
+    text-shadow:darkgrey 3px 5px;
 }
 
 .pixel-corners,
@@ -158,7 +172,6 @@ h1 {
 
 .action-display {  
     color: black;
-    text-shadow: gray 2px 4px;
 }
 
 .separator {
@@ -172,7 +185,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    text-shadow: gray 2px 4px;
 }
 
 .score-wrapper {
@@ -185,4 +197,18 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+footer {
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.footer-text {
+    margin: 9px;
+    padding: 0 48px;
 }
