@@ -51,3 +51,33 @@ function getWinScissors() {
         return true;
     };
 };
+
+// Display winner in .action-zone
+function displayWinner(pc, win) {
+    if(pc === 0) {
+        if (win === undefined) {
+            actionDisplay.value = "Draw! &#9994; vs &#9994;"
+        } else if (win === false) {
+            actionDisplay.value = "You lose! &#9995; beats &#9994;"
+        } else if (win === true) {
+            actionDisplay.value = "You win! &#9994; beats &#9996;"
+        }
+    } else if (pc === 1) {
+        if (win === undefined) {
+            actionDisplay.value = "Draw! &#9995; vs &#9995;"
+        } else if (win === false) {
+            actionDisplay.value = "You lose! &#9996; beats &#9995;"
+        } else if (win === true) {
+            actionDisplay.value = "You win! &#9995; beats &#9994;"
+        }
+    } else if (pc === 2) {
+        if (win === undefined) {
+            actionDisplay.value = "Draw! &#9996; vs &#9996;"
+        } else if (win === false) {
+            actionDisplay.value = "You lose! &#9994; beats &#9996;"
+        } else if (win === true) {
+            actionDisplay.value = "You win! &#9996; beats &#9995;"
+        }
+    }
+    //Add display of "Next" button!
+}
