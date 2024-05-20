@@ -27,3 +27,15 @@ function getWinRock() {
         return true;
     };
 };
+
+// Calculate winner if player selects paper
+function getWinPaper() {
+    let computerChoice = getComputerChoice();
+    if (computerChoice === 1) {
+        return undefined;
+    } else if (computerChoice === 2) {
+        return false;
+    } else if (computerChoice === 0) {
+        return true;
+    };
+};
