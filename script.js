@@ -15,3 +15,15 @@ function getComputerChoice() {
 };
 
 console.log(getComputerChoice());
+
+// Calculate winner if player selects rock
+function getWinRock() {
+    let computerChoice = getComputerChoice();
+    if (computerChoice === 0) {
+        return undefined;
+    } else if (computerChoice === 1) {
+        return false;
+    } else if (computerChoice === 2) {
+        return true;
+    };
+};
