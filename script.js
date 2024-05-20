@@ -1,17 +1,17 @@
-//Retrieve all elements from html
-
+// Retrieve elements from html
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
 const actionDisplay = document.querySelector(".action-display");
-const playerScore = docuemnt.querySelector(".player-score");
-const computerScore = docuemnt.querySelector(".computer-score");
-const resetButton = document.getElementById("reset-button");
+const playerScore = document.querySelector(".player-score");
+const computerScore = document.querySelector(".computer-score");
+const resetButton = document.querySelector(".reset-button");
 
+// Randomize computers-choice
+// 0 = Rock, 1 = Paper, 2 = Scissors
 function getComputerChoice() {
-    let weapons = ["rock", "paper", "scissors"];
     let choice = Math.floor(Math.random() * 3);
-    return weapons[choice];
-}
+    return choice;
+};
 
 console.log(getComputerChoice());
