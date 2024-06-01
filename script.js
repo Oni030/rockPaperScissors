@@ -19,48 +19,51 @@ console.log(getComputerChoice());
 // Calculate winner if player selects rock
 function getWinRock() {
     let computerChoice = getComputerChoice();
+    let win;
     if (computerChoice === 0) {
-        return undefined;
+        win = undefined;
     } else if (computerChoice === 1) {
-        return false;
+        win = false;
     } else if (computerChoice === 2) {
-        return true;
+        win = true;
     };
-    //Add function-call to display winner
+    displayWinner(0, win);
     //Add function-call to change the score
 };
 
 // Calculate winner if player selects paper
 function getWinPaper() {
     let computerChoice = getComputerChoice();
+    let win;
     if (computerChoice === 1) {
-        return undefined;
+        win = undefined;
     } else if (computerChoice === 2) {
-        return false;
+        win = false;
     } else if (computerChoice === 0) {
-        return true;
+        win = true;
     };
-    //Add function-call to display winner
+    displayWinner(1, win);
     //Add function-call to change the score
 };
 
 // Calculate winner if player selects scissors
 function getWinScissors() {
     let computerChoice = getComputerChoice();
+    let win;
     if (computerChoice === 2) {
-        return undefined;
+        win = undefined;
     } else if (computerChoice === 0) {
-        return false;
+        win = false;
     } else if (computerChoice === 1) {
-        return true;
+        win = true;
     };
-    //Add function-call to display winner
+    displayWinner(2, win);
     //Add function-call to change the score
 };
 
 // Display winner in .action-zone
-function displayWinner(pc, win) {
-    if(pc === 0) {
+function displayWinner(playersChoice, win) {
+    if(playersChoice === 0) {
         if (win === undefined) {
             actionDisplay.value = "Draw! &#9994; vs &#9994;"
         } else if (win === false) {
@@ -68,7 +71,7 @@ function displayWinner(pc, win) {
         } else if (win === true) {
             actionDisplay.value = "You win! &#9994; beats &#9996;"
         }
-    } else if (pc === 1) {
+    } else if (playersChoice === 1) {
         if (win === undefined) {
             actionDisplay.value = "Draw! &#9995; vs &#9995;"
         } else if (win === false) {
@@ -76,7 +79,7 @@ function displayWinner(pc, win) {
         } else if (win === true) {
             actionDisplay.value = "You win! &#9995; beats &#9994;"
         }
-    } else if (pc === 2) {
+    } else if (playersChoice === 2) {
         if (win === undefined) {
             actionDisplay.value = "Draw! &#9996; vs &#9996;"
         } else if (win === false) {
