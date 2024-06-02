@@ -38,7 +38,7 @@ function getWinRock() {
         win = true;
     };
     displayWinner(0, win);
-    //Add function-call to change the score
+    setNewScore(win);
 };
 
 // Calculate winner if player selects paper
@@ -53,7 +53,7 @@ function getWinPaper() {
         win = true;
     };
     displayWinner(1, win);
-    //Add function-call to change the score
+    setNewScore(win);
 };
 
 // Calculate winner if player selects scissors
@@ -68,7 +68,7 @@ function getWinScissors() {
         win = true;
     };
     displayWinner(2, win);
-    //Add function-call to change the score
+    setNewScore(win);
 };
 
 // Display winner in .action-zone
