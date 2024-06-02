@@ -3,6 +3,8 @@ const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
 const buttonContainer = document.querySelector(".button-container");
+const playerChoice = document.querySelector(".player-choice");
+const computerChoice = document.querySelector(".computer-choice");
 const actionDisplay = document.querySelector(".action-display");
 const playerScore = document.querySelector(".player-score");
 const computerScore = document.querySelector(".computer-score");
@@ -72,29 +74,43 @@ function getWinScissors() {
 // Display winner in .action-zone
 function displayWinner(playersChoice, win) {
     buttonContainer.style.display = "none";
+    playerChoice.style.display = "flex";
+    computerChoice.style.display = "flex";
     if(playersChoice === 0) {
+        playerChoice.innerHTML = "Player: &#9994;";
         if (win === undefined) {
-            actionDisplay.innerHTML = "Draw! &#9994; vs &#9994;"
+            computerChoice.innerHTML = "Computer: &#9994;";
+            actionDisplay.innerHTML = "Draw!"
         } else if (win === false) {
-            actionDisplay.innerHTML = "You lose! &#9995; beats &#9994;"
+            computerChoice.innerHTML = "Computer: &#9995;";
+            actionDisplay.innerHTML = "You lose!"
         } else if (win === true) {
-            actionDisplay.innerHTML = "You win! &#9994; beats &#9996;"
+            computerChoice.innerHTML = "Computer: &#9996;";
+            actionDisplay.innerHTML = "You win!"
         }
     } else if (playersChoice === 1) {
+        playerChoice.innerHTML = "Player: &#9995;";
         if (win === undefined) {
-            actionDisplay.innerHTML = "Draw! &#9995; vs &#9995;"
+            computerChoice.innerHTML = "Computer: &#9995;";
+            actionDisplay.innerHTML = "Draw!"
         } else if (win === false) {
-            actionDisplay.innerHTML = "You lose! &#9996; beats &#9995;"
+            computerChoice.innerHTML = "Computer: &#9996;";
+            actionDisplay.innerHTML = "You lose!"
         } else if (win === true) {
-            actionDisplay.innerHTML = "You win! &#9995; beats &#9994;"
+            computerChoice.innerHTML = "Computer: &#9994;";
+            actionDisplay.innerHTML = "You win!"
         }
     } else if (playersChoice === 2) {
+        playerChoice.innerHTML = "Player: &#9996;";
         if (win === undefined) {
-            actionDisplay.innerHTML = "Draw! &#9996; vs &#9996;"
+            computerChoice.innerHTML = "Computer: &#9996;";
+            actionDisplay.innerHTML = "Draw!"
         } else if (win === false) {
-            actionDisplay.innerHTML = "You lose! &#9994; beats &#9996;"
+            computerChoice.innerHTML = "Computer: &#9994;";
+            actionDisplay.innerHTML = "You lose!"
         } else if (win === true) {
-            actionDisplay.innerHTML = "You win! &#9996; beats &#9995;"
+            computerChoice.innerHTML = "Computer: &#9995;";
+            actionDisplay.innerHTML = "You win!"
         }
     }
     //Add display of "Next" button!
