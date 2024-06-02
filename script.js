@@ -123,3 +123,14 @@ function setNextGame() {
     nextButton.style.display = "none";
     actionDisplay.innerHTML = "Choose Your Weapon!"
 };
+
+function setNewScore(win) {
+    if (win === undefined) {
+    } else 
+    if (win === false) {
+        computerScore.textContent = parseInt(computerScore.textContent) + 1;
+    } else
+    if (win === true) {
+        playerScore.textContent = parseInt(playerScore.textContent) + 1;
+    }
+};
