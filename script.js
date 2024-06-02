@@ -2,6 +2,7 @@
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
+const buttonContainer = document.querySelector(".button-container");
 const actionDisplay = document.querySelector(".action-display");
 const playerScore = document.querySelector(".player-score");
 const computerScore = document.querySelector(".computer-score");
@@ -70,6 +71,7 @@ function getWinScissors() {
 
 // Display winner in .action-zone
 function displayWinner(playersChoice, win) {
+    buttonContainer.style.display = "none";
     if(playersChoice === 0) {
         if (win === undefined) {
             actionDisplay.innerHTML = "Draw! &#9994; vs &#9994;"
