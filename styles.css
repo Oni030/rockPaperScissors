@@ -182,6 +182,10 @@ header {
     color: black;
 }
 
+.next-button {
+    display: none;
+}
+
 .separator {
     margin: 16px;
     width: 400px;
