@@ -14,8 +14,6 @@ function getComputerChoice() {
     return choice;
 };
 
-console.log(getComputerChoice());
-
 // Calculate winner if player selects rock
 function getWinRock() {
     let computerChoice = getComputerChoice();
@@ -65,28 +63,28 @@ function getWinScissors() {
 function displayWinner(playersChoice, win) {
     if(playersChoice === 0) {
         if (win === undefined) {
-            actionDisplay.value = "Draw! &#9994; vs &#9994;"
+            actionDisplay.innerHTML = "Draw! &#9994; vs &#9994;"
         } else if (win === false) {
-            actionDisplay.value = "You lose! &#9995; beats &#9994;"
+            actionDisplay.innerHTML = "You lose! &#9995; beats &#9994;"
         } else if (win === true) {
-            actionDisplay.value = "You win! &#9994; beats &#9996;"
+            actionDisplay.innerHTML = "You win! &#9994; beats &#9996;"
         }
     } else if (playersChoice === 1) {
         if (win === undefined) {
-            actionDisplay.value = "Draw! &#9995; vs &#9995;"
+            actionDisplay.innerHTML = "Draw! &#9995; vs &#9995;"
         } else if (win === false) {
-            actionDisplay.value = "You lose! &#9996; beats &#9995;"
+            actionDisplay.innerHTML = "You lose! &#9996; beats &#9995;"
         } else if (win === true) {
-            actionDisplay.value = "You win! &#9995; beats &#9994;"
+            actionDisplay.innerHTML = "You win! &#9995; beats &#9994;"
         }
     } else if (playersChoice === 2) {
         if (win === undefined) {
-            actionDisplay.value = "Draw! &#9996; vs &#9996;"
+            actionDisplay.innerHTML = "Draw! &#9996; vs &#9996;"
         } else if (win === false) {
-            actionDisplay.value = "You lose! &#9994; beats &#9996;"
+            actionDisplay.innerHTML = "You lose! &#9994; beats &#9996;"
         } else if (win === true) {
-            actionDisplay.value = "You win! &#9996; beats &#9995;"
+            actionDisplay.innerHTML = "You win! &#9996; beats &#9995;"
         }
     }
     //Add display of "Next" button!
-}
+};
