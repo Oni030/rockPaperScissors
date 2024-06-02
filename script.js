@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     rockButton.addEventListener("click", getWinRock);
     paperButton.addEventListener("click", getWinPaper);
     scissorsButton.addEventListener("click", getWinScissors);
+    nextButton.addEventListener("click", setNextGame);
 });
 
 // Randomize computers-choice
