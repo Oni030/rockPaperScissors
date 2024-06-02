@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     paperButton.addEventListener("click", getWinPaper);
     scissorsButton.addEventListener("click", getWinScissors);
     nextButton.addEventListener("click", setNextGame);
+    resetButton.addEventListener("click", resetScore);
 });
 
 // Randomize computers-choice
