@@ -7,6 +7,15 @@ const playerScore = document.querySelector(".player-score");
 const computerScore = document.querySelector(".computer-score");
 const resetButton = document.querySelector(".reset-button");
 
+// Initialize the project + add EventListeners
+
+document.addEventListener("DOMContentLoaded", function() {
+    rockButton.addEventListener("click", getWinRock);
+    paperButton.addEventListener("click", getWinPaper);
+    scissorsButton.addEventListener("click", getWinScissors);
+});
+
+
 // Randomize computers-choice
 // 0 = Rock, 1 = Paper, 2 = Scissors
 function getComputerChoice() {
