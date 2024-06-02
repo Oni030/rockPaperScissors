@@ -153,6 +153,14 @@ header {
     justify-content: space-around;
 }
 
+.player-choice {
+    display: none;
+}
+
+.computer-choice {
+    display: none;
+}
+
 .weapon-button {
     font-size: 64px;
     background: white;
