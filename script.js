@@ -114,3 +114,11 @@ function displayWinner(playersChoice, win) {
         }
     }
 };
+
+function setNextGame() {
+    buttonContainer.style.display = "flex";
+    playerChoice.style.display = "none";
+    computerChoice.style.display = "none";
+    nextButton.style.display = "none";
+    actionDisplay.innerHTML = "Choose Your Weapon!"
+};
