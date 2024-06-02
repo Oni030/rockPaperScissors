@@ -71,7 +71,7 @@ function getWinScissors() {
     setNewScore(win);
 };
 
-// Display winner in .action-zone
+// Display players choice, computers choice and winner-text in .action-zone
 function displayWinner(playersChoice, win) {
     buttonContainer.style.display = "none";
     playerChoice.style.display = "flex";
