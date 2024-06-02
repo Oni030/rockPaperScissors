@@ -134,3 +134,8 @@ function setNewScore(win) {
         playerScore.textContent = parseInt(playerScore.textContent) + 1;
     }
 };
+
+function resetScore() {
+    computerScore.textContent = 0;
+    playerScore.textContent = 0;
+};
