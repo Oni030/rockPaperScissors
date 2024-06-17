@@ -1,4 +1,3 @@
-// Retrieve elements from html
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
@@ -11,7 +10,6 @@ const playerScore = document.querySelector(".player-score");
 const computerScore = document.querySelector(".computer-score");
 const resetButton = document.querySelector(".reset-button");
 
-// Initialize the project + add EventListeners
 document.addEventListener("DOMContentLoaded", function() {
     rockButton.addEventListener("click", getWinRock);
     paperButton.addEventListener("click", getWinPaper);
@@ -20,14 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
     resetButton.addEventListener("click", resetScore);
 });
 
-// Randomize computers-choice
-// 0 = Rock, 1 = Paper, 2 = Scissors
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
     return choice;
 };
 
-// Calculate winner if player selects rock
 function getWinRock() {
     let computerChoice = getComputerChoice();
     let win;
@@ -42,7 +37,6 @@ function getWinRock() {
     setNewScore(win);
 };
 
-// Calculate winner if player selects paper
 function getWinPaper() {
     let computerChoice = getComputerChoice();
     let win;
@@ -57,7 +51,6 @@ function getWinPaper() {
     setNewScore(win);
 };
 
-// Calculate winner if player selects scissors
 function getWinScissors() {
     let computerChoice = getComputerChoice();
     let win;
@@ -72,49 +65,27 @@ function getWinScissors() {
     setNewScore(win);
 };
 
-// Display players choice, computers choice and winner-text in .action-zone
 function displayWinner(playersChoice, win) {
     buttonContainer.style.display = "none";
     playerChoice.style.display = "flex";
     computerChoice.style.display = "flex";
     nextButton.style.display = "flex";
-    if(playersChoice === 0) {
-        playerChoice.innerHTML = "Player: &#9994;";
-        if (win === undefined) {
-            computerChoice.innerHTML = "Computer: &#9994;";
-            actionDisplay.innerHTML = "Draw!"
-        } else if (win === false) {
-            computerChoice.innerHTML = "Computer: &#9995;";
-            actionDisplay.innerHTML = "You lose!"
-        } else if (win === true) {
-            computerChoice.innerHTML = "Computer: &#9996;";
-            actionDisplay.innerHTML = "You win!"
-        }
-    } else if (playersChoice === 1) {
-        playerChoice.innerHTML = "Player: &#9995;";
-        if (win === undefined) {
-            computerChoice.innerHTML = "Computer: &#9995;";
-            actionDisplay.innerHTML = "Draw!"
-        } else if (win === false) {
-            computerChoice.innerHTML = "Computer: &#9996;";
-            actionDisplay.innerHTML = "You lose!"
-        } else if (win === true) {
-            computerChoice.innerHTML = "Computer: &#9994;";
-            actionDisplay.innerHTML = "You win!"
-        }
-    } else if (playersChoice === 2) {
-        playerChoice.innerHTML = "Player: &#9996;";
-        if (win === undefined) {
-            computerChoice.innerHTML = "Computer: &#9996;";
-            actionDisplay.innerHTML = "Draw!"
-        } else if (win === false) {
-            computerChoice.innerHTML = "Computer: &#9994;";
-            actionDisplay.innerHTML = "You lose!"
-        } else if (win === true) {
-            computerChoice.innerHTML = "Computer: &#9995;";
-            actionDisplay.innerHTML = "You win!"
-        }
-    }
+    
+    const choices = [`&#9994;`, `&#9994;`, `&#9994;`];
+    const computerChoices = {
+        0: { undefined: 0, false: 1, true: 2 },
+        1: { undefined: 1, false: 2, true: 0 },
+        2: { undefined: 2, false: 0, true: 1 }
+    };
+    const results = {
+        undefined: 'Draw!',
+        false: 'You lose!',
+        true: 'You win!'
+    };
+
+    playerChoice.textContent = `Player: ${choices[playersChoice]}`;
+    computerChoice.textContent = `Computer: ${choices[computerChoices[playersChoice][win]]}`;
+    actionDisplay.textContent = results[win];
 };
 
 function setNextGame() {
