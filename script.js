@@ -83,9 +83,9 @@ function displayWinner(playersChoice, win) {
         true: 'You win!'
     };
 
-    playerChoice.textContent = `Player: ${choices[playersChoice]}`;
-    computerChoice.textContent = `Computer: ${choices[computerChoices[playersChoice][win]]}`;
-    actionDisplay.textContent = results[win];
+    playerChoice.innerHTML = `Player: ${choices[playersChoice]}`;
+    computerChoice.innerHTML = `Computer: ${choices[computerChoices[playersChoice][win]]}`;
+    actionDisplay.innerHTML = results[win];
 };
 
 function setNextGame() {
